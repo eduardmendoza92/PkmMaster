@@ -1,5 +1,6 @@
 package com.emendoza.pkmmaster;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -35,6 +36,7 @@ public class StrategicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_strategic);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final Integer regionId = getIntent().getExtras().getInt("regionId");
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("PokeTeam");
@@ -75,8 +77,12 @@ public class StrategicActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(StrategicActivity.this, PkmTeamActivity.class);
+                intent.putExtra("regionId", regionId);
+                startActivity(intent);
                 // Write a message to the database
-                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("PokeTeam");
+                /*DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("PokeTeam");
 
                 ArrayList<ePokeTeam> pokeTeams = new ArrayList<ePokeTeam>();
                 ArrayList<ePokemon> pokeList = new ArrayList<ePokemon>();
@@ -96,7 +102,7 @@ public class StrategicActivity extends AppCompatActivity {
 
                 pokeTeams.add(1, pokeTeam);
 
-                mDatabase.setValue(pokeTeams);
+                mDatabase.setValue(pokeTeams);*/
             }
         });
     }

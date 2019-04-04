@@ -71,6 +71,7 @@ public class PkmRegionActivity extends AppCompatActivity {
                                     int position, long id) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(PkmRegionActivity.this, StrategicActivity.class);
+                intent.putExtra("regionId", position + 1);
                 startActivity(intent);
             }
         });
