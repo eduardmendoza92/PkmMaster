@@ -1,6 +1,10 @@
 package com.emendoza.pkmmaster.Entities;
 
 public class ePokemon {
+
+    public ePokemon() {
+    }
+
     public int id;
     public String name;
 

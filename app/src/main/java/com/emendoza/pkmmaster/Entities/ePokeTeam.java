@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ePokeTeam {
 
+    public ePokeTeam() {}
+
     private int id;
     private String name;
     private ArrayList<ePokemon> pokemon;
