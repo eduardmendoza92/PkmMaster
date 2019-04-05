@@ -14,10 +14,10 @@ public class ePoke {
     private PokemonHeldItem[] held_items;
     private String location_area_encounters;
     private PokemonMove[] moves;
-    private PokemonSprites[] sprites;
+    private PokemonSprites sprites;
     private NamedAPIResource species;
     private PokemonStat[] stats;
-    private PokemonType types;
+    private PokemonType[] types;
 
     public int getId() {
         return id;
@@ -123,11 +123,11 @@ public class ePoke {
         this.moves = moves;
     }
 
-    public PokemonSprites[] getSprites() {
+    public PokemonSprites getSprites() {
         return sprites;
     }
 
-    public void setSprites(PokemonSprites[] sprites) {
+    public void setSprites(PokemonSprites sprites) {
         this.sprites = sprites;
     }
 
@@ -147,13 +147,14 @@ public class ePoke {
         this.stats = stats;
     }
 
-    public PokemonType getTypes() {
+    public PokemonType[] getTypes() {
         return types;
     }
 
-    public void setTypes(PokemonType types) {
+    public void setTypes(PokemonType[] types) {
         this.types = types;
     }
+
 }
 
 class PokemonAbility {
@@ -169,7 +170,7 @@ class VersionGameIndex {
 
 class PokemonHeldItem {
     NamedAPIResource item;
-    PokemonHeldItemVersion version_details;
+    PokemonHeldItemVersion[] version_details;
 }
 
 class PokemonHeldItemVersion {
@@ -188,24 +189,7 @@ class PokemonMoveVersion {
     int level_learned_at;
 }
 
-class PokemonSprites {
-    private String front_default;
-    String front_shiny;
-    String front_female;
-    String front_shiny_female;
-    String back_default;
-    String back_shiny;
-    String back_female;
-    String back_shiny_female;
 
-    public String getFront_default() {
-        return front_default;
-    }
-
-    public void setFront_default(String front_default) {
-        this.front_default = front_default;
-    }
-}
 
 class PokemonStat {
     NamedAPIResource stat;

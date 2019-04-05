@@ -5,11 +5,13 @@ import java.util.List;
 
 public class ePokeTeam {
 
-    public ePokeTeam() {}
+    public ePokeTeam() {
+    }
 
     private int id;
     private String name;
-    private ArrayList<ePokemon> pokemon;
+    private String region;
+    private ArrayList<ePoke> pokemons;
 
     public int getId() {
         return id;
@@ -27,17 +29,26 @@ public class ePokeTeam {
         this.name = name;
     }
 
-    public ArrayList<ePokemon> getPokemon() {
-        return pokemon;
+    public ArrayList<ePoke> getPokemon() {
+        return pokemons;
     }
 
-    public void setPokemon(ArrayList<ePokemon> pokemon) {
-        this.pokemon = pokemon;
+    public void setPokemon(ArrayList<ePoke> pokemon) {
+        this.pokemons = pokemon;
     }
 
-    public ePokeTeam(int id, String name, ArrayList<ePokemon> pokemon) {
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public ePokeTeam(int id, String name, ArrayList<ePoke> pokemons, String region) {
         this.id = id;
         this.name = name;
-        this.pokemon = pokemon;
+        this.pokemons = pokemons;
+        this.region = region;
     }
 }
