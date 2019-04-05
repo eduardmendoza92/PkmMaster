@@ -36,7 +36,7 @@ public class StrategicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_strategic);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        final Integer regionId = getIntent().getExtras().getInt("regionId");
+        final String PokedexName = getIntent().getExtras().getString("PokedexName");
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("PokeTeam");
@@ -79,7 +79,7 @@ public class StrategicActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(StrategicActivity.this, PkmTeamActivity.class);
-                intent.putExtra("regionId", regionId);
+                intent.putExtra("PokedexName", PokedexName);
                 startActivity(intent);
                 // Write a message to the database
                 /*DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("PokeTeam");

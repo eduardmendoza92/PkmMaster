@@ -13,6 +13,8 @@ import android.widget.ListView;
 import com.emendoza.pkmmaster.Entities.NamedAPIResource;
 import com.emendoza.pkmmaster.Entities.APIResponse;
 import com.emendoza.pkmmaster.Entities.PostService;
+import com.emendoza.pkmmaster.Entities.GetRegions;
+import com.emendoza.pkmmaster.Entities.eRegion;
 
 import org.json.JSONObject;
 
@@ -70,9 +72,42 @@ public class PkmRegionActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(PkmRegionActivity.this, StrategicActivity.class);
-                intent.putExtra("regionId", position + 1);
-                startActivity(intent);
+                int idRegion = (position + 1);
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(baseUrl)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+
+                GetRegions getRegions = retrofit.create(GetRegions.class);
+                Call<eRegion> call = getRegions.getRegions(baseUrl + "region/" + String.valueOf(idRegion));
+
+                call.enqueue(new Callback<eRegion>() {
+                    @Override
+                    public void onResponse(Call<eRegion> call, Response<eRegion> response) {
+                        eRegion region = response.body();
+                        int totalPokedexes = region.getPokedexes().length;
+                        int index = 1;
+                        String pokedexName = "";
+                        for (NamedAPIResource namedAPIResource : region.getPokedexes()){
+                            if (totalPokedexes == index)
+                            {
+                                pokedexName = namedAPIResource.getName();
+                                Intent intent = new Intent(PkmRegionActivity.this, StrategicActivity.class);
+                                intent.putExtra("PokedexName", pokedexName);
+                                startActivity(intent);
+                            }
+                            index++;
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<eRegion> call, Throwable t) {
+                        Log.d("RETROFIT",t.getMessage(),t);
+                    }
+                });
+
+
             }
         });
 

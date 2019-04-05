@@ -5,7 +5,7 @@ public class eGeneration {
     private String name;
     private NamedAPIResource[] abilities;
     private eName[] names;
-    private NamedAPIResource[] main_region;
+    private NamedAPIResource main_region;
     private NamedAPIResource[] moves;
     private NamedAPIResource[] pokemon_species;
     private NamedAPIResource[] types;
@@ -43,11 +43,11 @@ public class eGeneration {
         this.names = names;
     }
 
-    public NamedAPIResource[] getMain_region() {
+    public NamedAPIResource getMain_region() {
         return main_region;
     }
 
-    public void setMain_region(NamedAPIResource[] main_region) {
+    public void setMain_region(NamedAPIResource main_region) {
         this.main_region = main_region;
     }
 

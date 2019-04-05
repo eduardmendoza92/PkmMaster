@@ -27,14 +27,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <Button
+                android:id="@+id/agregar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorText"
+                android:text="Agregar"
+                android:onClick="onAgregarClick"/>
+
             <GridView
                 android:id="@+id/gvPokeTeam"
                 android:numColumns="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-
         </LinearLayout>
+
+
 
     </LinearLayout>
 
