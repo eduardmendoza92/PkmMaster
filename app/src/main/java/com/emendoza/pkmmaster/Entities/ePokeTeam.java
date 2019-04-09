@@ -11,7 +11,7 @@ public class ePokeTeam {
     private int id;
     private String name;
     private String region;
-    private ArrayList<ePoke> pokemons;
+    private ArrayList<ePokemon> pokemon;
 
     public int getId() {
         return id;
@@ -29,12 +29,12 @@ public class ePokeTeam {
         this.name = name;
     }
 
-    public ArrayList<ePoke> getPokemon() {
-        return pokemons;
+    public ArrayList<ePokemon> getPokemon() {
+        return pokemon;
     }
 
-    public void setPokemon(ArrayList<ePoke> pokemon) {
-        this.pokemons = pokemon;
+    public void setPokemon(ArrayList<ePokemon> pokemon) {
+        this.pokemon = pokemon;
     }
 
     public String getRegion() {
@@ -45,10 +45,10 @@ public class ePokeTeam {
         this.region = region;
     }
 
-    public ePokeTeam(int id, String name, ArrayList<ePoke> pokemons, String region) {
+    public ePokeTeam(int id, String name, ArrayList<ePokemon> pokemon, String region) {
         this.id = id;
         this.name = name;
-        this.pokemons = pokemons;
+        this.pokemon = pokemon;
         this.region = region;
     }
 }

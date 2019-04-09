@@ -2,6 +2,7 @@ package com.emendoza.pkmmaster;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -27,7 +28,7 @@ public class StrategicActivity extends AppCompatActivity {
     ListView listView;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    ArrayList<String> teamsPokemon = new ArrayList<>();
+
     ArrayAdapter<String> arrayAdapter;
 
     @Override
@@ -38,23 +39,45 @@ public class StrategicActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         final String PokedexName = getIntent().getExtras().getString("PokedexName");
 
+        String android_id = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("PokeTeam");
+        databaseReference = firebaseDatabase.getReference(android_id);
 
         listView = (ListView) findViewById(R.id.listTeams);
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                ePokeTeam value = dataSnapshot.getValue(ePokeTeam.class);
-                teamsPokemon.add(value.getName());
+                ArrayList<String> teamsPokemon = new ArrayList<>();
+                for(DataSnapshot dsp : dataSnapshot.getChildren())
+                {
+                    ePokeTeam value = dsp.getValue(ePokeTeam.class);
+                    String nameRegion = value.getRegion();
+                    if (nameRegion.equals(PokedexName))
+                    {
+                        teamsPokemon.add(value.getName());
+                    }
+                }
                 ArrayAdapter arrayAdapter = new ArrayAdapter(StrategicActivity.this,android.R.layout.simple_list_item_1,teamsPokemon);
                 listView.setAdapter(arrayAdapter);
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
+                ArrayList<String> teamsPokemon = new ArrayList<>();
+                for(DataSnapshot dsp : dataSnapshot.getChildren())
+                {
+                    ePokeTeam value = dsp.getValue(ePokeTeam.class);
+                    String nameRegion = value.getRegion();
+                    if (nameRegion.equals(PokedexName))
+                    {
+                        teamsPokemon.add(value.getName());
+                    }
+                }
+                ArrayAdapter arrayAdapter = new ArrayAdapter(StrategicActivity.this,android.R.layout.simple_list_item_1,teamsPokemon);
+                listView.setAdapter(arrayAdapter);
             }
 
             @Override

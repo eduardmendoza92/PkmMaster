@@ -1,6 +1,10 @@
 package com.emendoza.pkmmaster.Entities;
 
-public class ePoke {
+import com.google.firebase.database.Exclude;
+import com.google.firebase.database.IgnoreExtraProperties;
+
+
+public @IgnoreExtraProperties class ePoke {
     private int id;
     private String name;
     private int base_experience;
@@ -35,123 +39,123 @@ public class ePoke {
         this.name = name;
     }
 
-    public int getBase_experience() {
+    @Exclude public int getBase_experience() {
         return base_experience;
     }
 
-    public void setBase_experience(int base_experience) {
+    @Exclude public void setBase_experience(int base_experience) {
         this.base_experience = base_experience;
     }
 
-    public int getHeight() {
+    @Exclude public int getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    @Exclude public void setHeight(int height) {
         this.height = height;
     }
 
-    public Boolean getIs_default() {
+    @Exclude public Boolean getIs_default() {
         return is_default;
     }
 
-    public void setIs_default(Boolean is_default) {
+    @Exclude public void setIs_default(Boolean is_default) {
         this.is_default = is_default;
     }
 
-    public int getOrder() {
+    @Exclude public int getOrder() {
         return order;
     }
 
-    public void setOrder(int order) {
+    @Exclude public void setOrder(int order) {
         this.order = order;
     }
 
-    public int getWeight() {
+    @Exclude public int getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    @Exclude public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public PokemonAbility[] getAbilities() {
+    @Exclude public PokemonAbility[] getAbilities() {
         return abilities;
     }
 
-    public void setAbilities(PokemonAbility[] abilities) {
+    @Exclude public void setAbilities(PokemonAbility[] abilities) {
         this.abilities = abilities;
     }
 
-    public NamedAPIResource[] getForms() {
+    @Exclude public NamedAPIResource[] getForms() {
         return forms;
     }
 
-    public void setForms(NamedAPIResource[] forms) {
+    @Exclude public void setForms(NamedAPIResource[] forms) {
         this.forms = forms;
     }
 
-    public VersionGameIndex[] getGame_indices() {
+    @Exclude public VersionGameIndex[] getGame_indices() {
         return game_indices;
     }
 
-    public void setGame_indices(VersionGameIndex[] game_indices) {
+    @Exclude public void setGame_indices(VersionGameIndex[] game_indices) {
         this.game_indices = game_indices;
     }
 
-    public PokemonHeldItem[] getHeld_items() {
+    @Exclude public PokemonHeldItem[] getHeld_items() {
         return held_items;
     }
 
-    public void setHeld_items(PokemonHeldItem[] held_items) {
+    @Exclude public void setHeld_items(PokemonHeldItem[] held_items) {
         this.held_items = held_items;
     }
 
-    public String getLocation_area_encounters() {
+    @Exclude public String getLocation_area_encounters() {
         return location_area_encounters;
     }
 
-    public void setLocation_area_encounters(String location_area_encounters) {
+    @Exclude public void setLocation_area_encounters(String location_area_encounters) {
         this.location_area_encounters = location_area_encounters;
     }
 
-    public PokemonMove[] getMoves() {
+    @Exclude public PokemonMove[] getMoves() {
         return moves;
     }
 
-    public void setMoves(PokemonMove[] moves) {
+    @Exclude public void setMoves(PokemonMove[] moves) {
         this.moves = moves;
     }
 
-    public PokemonSprites getSprites() {
+    @Exclude public PokemonSprites getSprites() {
         return sprites;
     }
 
-    public void setSprites(PokemonSprites sprites) {
+    @Exclude public void setSprites(PokemonSprites sprites) {
         this.sprites = sprites;
     }
 
-    public NamedAPIResource getSpecies() {
+    @Exclude public NamedAPIResource getSpecies() {
         return species;
     }
 
-    public void setSpecies(NamedAPIResource species) {
+    @Exclude public void setSpecies(NamedAPIResource species) {
         this.species = species;
     }
 
-    public PokemonStat[] getStats() {
+    @Exclude public PokemonStat[] getStats() {
         return stats;
     }
 
-    public void setStats(PokemonStat[] stats) {
+    @Exclude public void setStats(PokemonStat[] stats) {
         this.stats = stats;
     }
 
-    public PokemonType[] getTypes() {
+    @Exclude public PokemonType[] getTypes() {
         return types;
     }
 
-    public void setTypes(PokemonType[] types) {
+    @Exclude public void setTypes(PokemonType[] types) {
         this.types = types;
     }
 

@@ -86,5 +86,5 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
-    <string name="title_activity_strategic">StrategicActivity</string>
+    <string name="title_activity_strategic">Equipo</string>
 </resources>
