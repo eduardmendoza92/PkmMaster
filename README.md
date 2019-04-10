@@ -6,8 +6,8 @@
 
 
 ![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174540_PkmMaster.jpg?raw=true)
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174753_PkmMaster.jpg?raw=true)
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174525_PkmMaster.jpg?raw=true)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174553_PkmMaster.jpg?raw=true)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174725_PkmMaster.jpg?raw=true)
 ![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174802_PkmMaster.jpg?raw=true)
 
 
