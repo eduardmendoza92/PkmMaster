@@ -5,10 +5,10 @@
 # Capturas de Pantalla
 
 
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174540_PkmMaster.jpg?raw=true | width: 300)
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174553_PkmMaster.jpg?raw=true | width: 300)
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174725_PkmMaster.jpg?raw=true | width: 300)
-![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174802_PkmMaster.jpg?raw=true | width: 300)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174540_PkmMaster.jpg?raw=true)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174553_PkmMaster.jpg?raw=true)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174725_PkmMaster.jpg?raw=true)
+![alt text](https://github.com/eduardmendoza92/PkmMaster/blob/master/ScreenShots/Screenshot_20190409-174802_PkmMaster.jpg?raw=true)
 
 
 # Puntos Terminados
