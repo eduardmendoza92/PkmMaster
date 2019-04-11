@@ -1,60 +1,74 @@
 {
   "project_info": {
-    "project_number": "535923768330",
-    "firebase_url": "https://pokemaster-f7c5b.firebaseio.com",
-    "project_id": "pokemaster-f7c5b",
-    "storage_bucket": "pokemaster-f7c5b.appspot.com"
+    "project_number": "125893724538",
+    "firebase_url": "https://pokemaster-1ac5c.firebaseio.com",
+    "project_id": "pokemaster-1ac5c",
+    "storage_bucket": "pokemaster-1ac5c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:535923768330:android:5eba06251952f0b9",
+        "mobilesdk_app_id": "1:125893724538:android:5eba06251952f0b9",
         "android_client_info": {
           "package_name": "com.emendoza.pkmmaster"
         }
       },
       "oauth_client": [
         {
-          "client_id": "535923768330-uega7l7jgpj1b8ia8hrqcorfv64vjsd9.apps.googleusercontent.com",
+          "client_id": "125893724538-3phju4nv56bo18uuonp0aj9nlrukjq6c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.emendoza.pkmmaster",
-            "certificate_hash": "d61df9885b1b60f7bd0b0d09accdc7fedb137f67"
+            "certificate_hash": "25ea849e3deb9935daa7e951b867b57a38abac51"
           }
         },
         {
-          "client_id": "535923768330-akp5jicmp6q6rkum6btvbf2v1gbfe40e.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.emendoza.pkmmaster",
-            "certificate_hash": "85d047cf012a47b5095278b6122515adec9805c7"
-          }
-        },
-        {
-          "client_id": "535923768330-nggohi77p3iit53l5jqhmrl9j3sg9r2j.apps.googleusercontent.com",
+          "client_id": "125893724538-ht153blhj96hsjt73qakcrcpffvbjsm6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBJF16btmnJ4sZZ7fUc2ou0adjhGkMdsDA"
+          "current_key": "AIzaSyDWMSXiac2Mlu-RetVhA0oTwLEPQXhASZA"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "535923768330-nggohi77p3iit53l5jqhmrl9j3sg9r2j.apps.googleusercontent.com",
+              "client_id": "125893724538-ht153blhj96hsjt73qakcrcpffvbjsm6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125893724538:android:3205fc24f67698ef",
+        "android_client_info": {
+          "package_name": "com.mendozadev.pokegex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125893724538-ht153blhj96hsjt73qakcrcpffvbjsm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWMSXiac2Mlu-RetVhA0oTwLEPQXhASZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125893724538-ht153blhj96hsjt73qakcrcpffvbjsm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
